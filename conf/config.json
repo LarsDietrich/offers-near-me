@@ -1,0 +1,39 @@
+{
+    "layout": "layouts/main",
+    "pubDir": "public",
+    "templatesDir": "shared/templates",
+    "meituan": {
+        "apiUrl": "//group.mobile.meituan.com/api/",
+        "apiVer": "v1"
+    },
+    "yui": {
+        "version": "3.5.1",
+
+        "client": {
+            "modules": {
+            }
+        },
+
+        "server": {
+            "base": "vendor",
+
+            "modules": {
+                "gallery-model-sync-yql": {
+                    "requires": [
+                        "model",
+                        "yql"
+                    ]
+                }
+            }
+        },
+
+        "onm": {
+            "base": "/js/",
+            "combo": "/combo?",
+            "root": "/",
+
+            "modules": {
+            }
+        }
+    }
+}

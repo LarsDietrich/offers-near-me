@@ -1,0 +1,22 @@
+{
+  "name": "elephant",
+  "version": "0.0.0",
+  "private": true,
+  "description": "study express 3.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "study",
+    "express"
+  ],
+  "author": "wenbing",
+  "dependencies": {
+      "express": "3.x",
+      "consolidate": "",
+      "handlebars": "",
+      "yui": "3.5.1",
+      "combohandler": "~0.1"
+  }
+}

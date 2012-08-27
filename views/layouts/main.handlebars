@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+    <title>{{> title}}</title>
+    <meta name="description" content="" />
+    <meta name="author" content="wenbing" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+    <div id="wrapper" class="{{#if located}}located{{else}}loading{{/if}}">
+        <div id="header">
+            {{> header}}
+        </div>
+        <div id="main" class="layout">
+            {{> body}}
+        </div>
+    </div>
+
+    <script src="http://yui.yahooapis.com/{{yui_version}}/build/yui/yui{{min}}.js"></script>
+    <script>
+        {{#yui_config}}
+        var YUI_config = {{{.}}};
+        {{/yui_config}}
+        YUI().use('*', function() {
+        });
+    </script>
+	
+</body>
+</html>
