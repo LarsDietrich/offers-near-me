@@ -3,7 +3,7 @@
     "pubDir": "public",
     "templatesDir": "shared/templates",
     "meituan": {
-        "apiUrl": "//group.mobile.meituan.com/api/",
+        "apiUrl": "http://group.mobile.meituan.com/api/",
         "apiVer": "v1"
     },
     "yui": {

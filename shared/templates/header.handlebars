@@ -1,0 +1,14 @@
+<h1>
+    <a href="/" id="logo">
+        <span class="pin-shadow"></span>
+        <span class="pin"></span>
+    </a>
+
+  {{#if place}}
+    <a href="/places/{{place.id}}/">
+        Offers Near <span id="location">{{place.text}}</span>
+    </a>
+  {{else}}
+    Offers Near <span id="location">Me</span>
+  {{/if}}
+</h1>

@@ -10,11 +10,12 @@ var express = require('express'),
 
 app.engine('handlebars', require('./lib/view'));
 app.set('view engine', 'handlebars');
+app.set('views layout', config.layout);
 app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res) {
     res.render('index', {
-        title: 'hello world'
+        layout: 'non'
     });
 });
 
