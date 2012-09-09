@@ -51,6 +51,36 @@ app.get('/combo', combo.combine({ rootPath: pubDir + '/js' }), function(req, res
     res.send(js, 200);
 });
 
+// Dymanic resource for precompiled templates.
+app.get('/templates.js', function(req, res, next) {
+    var precompiled = require('./lib/templates').getPrecompiled(),
+        templates = [];
+
+    Y.Object.each(precompiled, function(template, name) {
+        templates.push({
+            name: name,
+            template: template
+        });
+    });
+
+    res.render('templates', {
+        layout: false,
+        templates: templates
+    }, function(err, view) {
+        if(err) {
+            return next(err);
+        }
+        var templates = view,
+            minify;
+        if(app.enabled('minify templates')) {
+            minify = require('uglify-js');
+            templates = minify(templates);
+        }
+        res.set('Content-Type', 'application/javascript');
+        res.send(200, templates);
+    });
+});
+
 
 app.listen(3000);
 console.log('Listening on port 3000');

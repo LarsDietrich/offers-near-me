@@ -1,0 +1,11 @@
+YUI.add('onm-templates', function (Y) {
+
+    var Templates = Y.namespace('ONM').Templates = {};
+
+  {{#templates}}
+    Templates['{{{name}}}'] = Y.Handlebars.template({{{template}}});
+  {{/templates}}
+
+}, '0.0.1', {
+    requires: ['handlebars-base']
+});
