@@ -1,8 +1,8 @@
 {
-  "name": "offers new me",
+  "name": "offers-near-me",
   "version": "0.0.0",
   "private": true,
-  "description": "study express 3.0.0",
+  "description": "offers near me",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,10 @@
       "consolidate": "",
       "handlebars": "",
       "yui": "3.5.1",
-      "combohandler": "~0.1"
+      "combohandler": "~0.1",
+      "uglify-js": ""
+  },
+  "devDependencies": {
+      "livereload": "*"
   }
 }

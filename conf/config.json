@@ -33,6 +33,14 @@
             "root": "/",
 
             "modules": {
+                "onm-app": {
+                    "path": "/app.js",
+                    "requires": [
+                        "app-base",
+                        "app-transitions",
+                        "gallery-geo"
+                    ]
+                }
             }
         }
     }
